@@ -97,7 +97,7 @@ const server = createServer((request, response) => {
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 8000;
 
 // procces é um grande objeto que refere a tudo do processo, env remete as variáveis globais, e HOSTNAME é a variável que fala o nome da rota
-const HOSTNAME = process.env.PORT || "127.0.0.1"; // O operador "||" (pipe pipe) nesse caso testa se o valor é false, 0, null, undefined ou "", caso seja ele pega o valor "127.0.0.1"
+const HOSTNAME = process.env.HOSTNAME || "127.0.0.1"; // O operador "||" (pipe pipe) nesse caso testa se o valor é false, 0, null, undefined ou "", caso seja ele pega o valor "127.0.0.1"
 
 // Servidor ouve alguns argumentos, (Porta,HostName -> Passei um IP Local, função). Este listen define a URL em que a api vai rodar.
 server.listen(PORT, HOSTNAME, () => {
